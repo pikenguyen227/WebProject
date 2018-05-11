@@ -3,6 +3,8 @@
 .loginBackground
 { 
 	background-color:#FDC58F;
+	overflow: hidden;
+
  /*
   background: url(Images/loginpagebackground.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -13,17 +15,21 @@
 }
 
 
-.centerDivSection {
+.centerDivSectionAnimatedFromBottom {
     position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top:0px;
+    bottom: -1000px;
+    left: 0px;
+    right: 0px;
 	margin: auto;
+	
 	
 	border-style:solid;
 	border-color: #FDC58F;
-	border-radius: 20px;
+	
+	border-radius: 50px 50px 0px 0px;
+	
+	
 	
 	height: 520px;
 	width: 320px;
@@ -31,8 +37,23 @@
 	background: url(Images/loginpageDivBackground.jpg) no-repeat center center fixed; 
 	background-size: 320px 520px;
 	
+}
 
-		
+.centerDivSection {
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+	margin: auto;
+	
+	
+	height: 50px;
+	width: 50px;
+
+	background: url(Images/book.gif) no-repeat center center fixed; 
+	background-size: 50px 50px;
+	
 }
 
 .companyText{
@@ -47,6 +68,7 @@
 	position:absolute;
 	left: 50px;
 	top: 60px;
+	opacity: 0
 }
 
 .transparentTextInput {
@@ -155,3 +177,139 @@
    	color: white;
 }
 
+
+@keyframes fadeIn {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
+} 
+
+@-webkit-keyframes fadeIn {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
+}
+
+@-ms-keyframes fadeIn {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
+}
+
+
+/*
+@keyframes fadeOut {
+   0% {opacity: 1;}
+   100% {opacity: 0;}
+} 
+
+@-webkit-keyframes fadeOut {
+   0% {opacity: 1;}
+   100% {opacity: 0;}
+}
+
+@-moz-keyframes fadeOut {
+   0% {opacity: 1;}
+   100% {opacity: 0;}
+}
+
+@-ms-keyframes fadeOut {
+   0% {opacity: 1;}
+   100% {opacity: 0;}
+}
+
+@-o-keyframes fadeOut {
+   0% {opacity: 1;}
+   100% {opacity: 0;}
+}
+
+*/
+
+@keyframes moveToCenter {
+	from {top:0px;bottom: -1000px;left: 0px;right: 0px;}
+  	to { top:0px;bottom: 0px;left: 0px;right: 0px;}
+} 
+
+@-webkit-keyframes moveToCenter  {
+  	from {top:0px;bottom: -1000px;left: 0px;right: 0px;}
+  	to { top:0px;bottom: 0px;left: 0px;right: 0px;}
+}
+
+@-moz-keyframes moveToCenter  {
+   	from {top:0px;bottom: -1000px;left: 0px;right: 0px;}
+  	to { top:0px;bottom: 0px;left: 0px;right: 0px;}
+}
+
+@-ms-keyframes moveToCenter  {
+   	from {top:0px;bottom: -1000px;left: 0px;right: 0px;}
+  	to { top:0px;bottom: 0px;left: 0px;right: 0px;}
+}
+
+@-o-keyframes moveToCenter  {
+   	from {top:0px;bottom: -1000px;left: 0px;right: 0px;}
+  	to { top:0px;bottom: 0px;left: 0px;right: 0px;}
+}
+
+.fadeIn {
+	opacity: 0;
+	-webkit-animation: fadeIn 0.5s ease-in-out forwards;
+  	-moz-animation: fadeIn 0.5s ease-in-out forwards;
+  	-ms-animation: fadeIn 0.5s ease-in-out forwards
+  	-o-animation: fadeIn 0.5s ease-in-out forwards;
+  	animation: fadeIn 0.5s ease-in-out forwards;
+
+}
+
+.fadeInWithDelay  {
+	opacity: 0;
+	-webkit-animation: fadeIn 0.5s 2.35s ease-in-out forwards;
+  	-moz-animation: fadeIn 0.5s 2.35s ease-in-out forwards;
+  	-ms-animation: fadeIn 0.5s 2.35s ease-in-out forwards
+  	-o-animation: fadeIn 0.5s 2.35s ease-in-out forwards;
+  	animation: fadeIn 0.5s 2.35s ease-in-out forwards;
+}
+
+/*
+.fadeOut {
+	opacity: 1;
+	-webkit-animation: fadeOut 1s ease-in-out forwards;
+  	-moz-animation: fadeOut 0.5s ease-in-out forwards;
+  	-ms-animation: fadeOut 0.5s ease-in-out forwards
+  	-o-animation: fadeOut 0.5s ease-in-out forwards;
+  	animation: fadeOut 0.5s ease-in-out forwards;
+
+}
+
+.fadeOutWithDelay  {
+	opacity: 1;
+	-webkit-animation: fadeOut 0.5s 3s ease-in-out forwards;
+  	-moz-animation: fadeOut 0.5s 3s ease-in-out forwards;
+  	-ms-animation: fadeOut 0.5s 3s ease-in-out forwards
+  	-o-animation: fadeOut 0.5s 3s ease-in-out forwards;
+  	animation: fadeOut 0.5s 3s ease-in-out forwards;
+}
+
+*/
+.moveToCenter{ 
+	
+	-webkit-animation: moveToCenter .5s ease-in-out forwards;
+  	-moz-animation: moveToCenter .5s ease-in-out forwards;
+  	-ms-animation: moveToCenter .5s ease-in-out forwards;
+  	-o-animation: moveToCenter .5s ease-in-out forwards;
+  	animation: moveToCenter .5s ease-in-out forwards;
+}
+
+.moveToCenterWithDelay{ 
+	-webkit-animation: moveToCenter .5s 2s ease-in-out forwards;
+  	-moz-animation: moveToCenter .5s 2s ease-in-out forwards;
+  	-ms-animation: moveToCenter .5s 2s ease-in-out forwards;
+  	-o-animation: moveToCenter .5s 2s ease-in-out forwards;
+  	animation: moveToCenter .5s 2s ease-in-out forwards;
+}
